@@ -7,8 +7,7 @@ services:
       - path: .env.app
         required: false
     environment:
-      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
-      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+      # RABBITMQ_DEFAULT_USER e RABBITMQ_DEFAULT_PASS vêm do env_file (.env.app / APP_ENV)
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     expose:
